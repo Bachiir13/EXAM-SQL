@@ -15,11 +15,14 @@ QUESTION 6 : SELECT * FROM `role` WHERE nomRôle ='Chewbacca';
 QUESTION 7 : 58 minutes pour vivre, Une Journée en enfer, Die Hard 4 : Retour en enfer, Piège de cristal 
 SELECT * FROM role WHERE idActeur ='62';
 
-QUESTION 8 :
+QUESTION 8 : SELECT a.nom, a.prénom FROM artiste a JOIN role r ON a.idArtiste = r.idActeur JOIN film f ON r.idFilm = f.idFilm WHERE f.titre = 'Sueurs froides';
+Stewart James
+Novak Kim
+Bel Geddes Barbara
 
 QUESTION 9 : SELECT * FROM notation WHERE email ='anon0@afpa-zakademie.com';
 
-QUESTION 10 : 
+QUESTION 10 : SELECT DISTINCT f.titre FROM film f JOIN artiste r ON f.idRéalisateur = r.idArtiste JOIN role ro ON f.idFilm = ro.idFilm JOIN artiste a ON ro.idActeur = a.idArtiste WHERE r.nom = 'Burton' AND r.prénom = 'Tim' AND a.nom = 'Depp' AND a.prénom = 'Johnny';
 
 QUESTION 11 : Match point, Scoop, Manhattan, Annie Hall, Alice, Intérieurs, Maris et femmes, Minuit à Paris. Il a jouer comme role : Sid Waterman,Isaac Davis,Alvy Singer,Prof. Gabriel 'Gabe' Roth
 
