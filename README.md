@@ -68,7 +68,7 @@ QUESTION 18 : SELECT f.titre FROM film f WHERE f.idFilm NOT IN ( SELECT n.idFilm
 
 QUESTION 19 : SELECT DISTINCT a.nom, a.prénom FROM artiste a JOIN role r ON a.idArtiste = r.idActeur WHERE a.idArtiste NOT IN ( SELECT DISTINCT f.idRéalisateur FROM film f WHERE f.idRéalisateur IS NOT NULL );
 
-QUESTION 20 : SELECT AVG(n.note) AS moyenne FROM notation n JOIN film f ON n.idFilm = f.idFilm WHERE f.titre = 'Memento';
+QUESTION 20 : SELECT AVG(n.note) moyenne FROM notation n JOIN film f ON n.idFilm = f.idFilm WHERE f.titre = 'Memento';
 Moyenne 8
 
 QUESTION 21 : SELECT r.idArtiste, r.nom, r.prénom, COUNT(f.idFilm) AS nb_films FROM artiste r JOIN film f ON r.idArtiste = f.idRéalisateur GROUP BY r.idArtiste, r.nom, r.prénom;
