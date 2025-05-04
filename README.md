@@ -15,7 +15,7 @@ QUESTION 6 : SELECT * FROM `role` WHERE nomRôle ='Chewbacca';
 QUESTION 7 : 58 minutes pour vivre, Une Journée en enfer, Die Hard 4 : Retour en enfer, Piège de cristal 
 SELECT * FROM role WHERE idActeur ='62';
 
-QUESTION 8 : SELECT a.nom, a.prénom FROM artiste a JOIN role r ON a.idArtiste = r.idActeur JOIN film f ON r.idFilm = f.idFilm WHERE f.titre = 'Sueurs froides';
+QUESTION 8 : SELECT artiste.nom, artiste.prénom FROM artiste, role, film WHERE artiste.idArtiste = role.idActeur AND role.idFilm = film.idFilm AND film.titre = 'Sueurs froides';;
 Stewart James
 Novak Kim
 Bel Geddes Barbara
