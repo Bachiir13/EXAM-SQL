@@ -22,15 +22,7 @@ Bel Geddes Barbara
 
 QUESTION 9 : SELECT * FROM notation WHERE email ='anon0@afpa-zakademie.com';
 
-QUESTION 10 : SELECT DISTINCT film.titre
-FROM film, artiste AS realisateur, role, artiste AS acteur
-WHERE film.idRéalisateur = realisateur.idArtiste
-  AND film.idFilm = role.idFilm
-  AND role.idActeur = acteur.idArtiste
-  AND realisateur.nom = 'Burton'
-  AND realisateur.prénom = 'Tim'
-  AND acteur.nom = 'Depp'
-  AND acteur.prénom = 'Johnny';
+QUESTION 10 : SELECT DISTINCT f.titre FROM film f, artiste r, role ro, artiste a WHERE f.idRéalisateur = r.idArtiste AND f.idFilm = ro.idFilm AND ro.idActeur = a.idArtiste AND r.nom = 'Burton' AND r.prénom = 'Tim' AND a.nom = 'Depp' AND a.prénom = 'Johnny';
 
 
 QUESTION 11 : SELECT film.titre, role.nomRole
@@ -53,7 +45,7 @@ Django Unchained
 
 QUESTION 14 :
 
-QUESTION 15 : SELECT f.titre FROM film f JOIN artiste r ON f.idRéalisateur = r.idArtiste WHERE r.nom = 'Hitchcock' AND r.prénom = 'Alfred' AND f.idFilm NOT IN ( SELECT r2.idFilm FROM role r2 JOIN artiste a2 ON r2.idActeur = a2.idArtiste WHERE a2.nom = 'Stewart' AND a2.prénom = 'James' );
+QUESTION 15 : SELECT film.titre FROM film, artiste WHERE film.idRéalisateur = artiste.idArtiste AND artiste.nom = 'Hitchcock' AND artiste.prénom = 'Alfred' AND film.idFilm NOT IN ( SELECT role.idFilm FROM role, artiste WHERE role.idActeur = artiste.idArtiste AND artiste.nom = 'Stewart' AND artiste.prénom = 'James' );
 La Mort aux trousses
 Rebecca
 Les Enchaînés
