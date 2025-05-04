@@ -4,7 +4,7 @@ QUESTION 1 : SELECT * FROM artiste WHERE annéeNaiss < 1950;
 
 QUESTION 2 : SELECT * FROM film WHERE genre = 'Drame';
 
-QUESTION 3 : SELECT * FROM `role` WHERE idActeur ='62';
+QUESTION 3 : SELECT * FROM artiste WHERE nom ='Willis'; SELECT * FROM `role` WHERE idActeur ='62';
 
 QUESTION 4 : SELECT * FROM `bdd existante`.`artiste` WHERE `idArtiste` = 525
 
