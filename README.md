@@ -33,7 +33,14 @@ WHERE film.idRéalisateur = realisateur.idArtiste
   AND acteur.prénom = 'Johnny';
 
 
-QUESTION 11 : Match point, Scoop, Manhattan, Annie Hall, Alice, Intérieurs, Maris et femmes, Minuit à Paris. Il a jouer comme role : Sid Waterman,Isaac Davis,Alvy Singer,Prof. Gabriel 'Gabe' Roth
+QUESTION 11 : SELECT film.titre, role.nomRole
+FROM film, artiste, role
+WHERE artiste.idArtiste = role.idActeur
+  AND role.idFilm = film.idFilm
+  AND artiste.nom = 'Allen'
+  AND artiste.prénom = 'Woody';
+
+Match point, Scoop, Manhattan, Annie Hall, Alice, Intérieurs, Maris et femmes, Minuit à Paris. Il a jouer comme role : Sid Waterman,Isaac Davis,Alvy Singer,Prof. Gabriel 'Gabe' Roth
 
 QUESTION 12 : 
 
