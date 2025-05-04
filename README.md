@@ -22,7 +22,16 @@ Bel Geddes Barbara
 
 QUESTION 9 : SELECT * FROM notation WHERE email ='anon0@afpa-zakademie.com';
 
-QUESTION 10 : SELECT DISTINCT f.titre FROM film f JOIN artiste r ON f.idRéalisateur = r.idArtiste JOIN role ro ON f.idFilm = ro.idFilm JOIN artiste a ON ro.idActeur = a.idArtiste WHERE r.nom = 'Burton' AND r.prénom = 'Tim' AND a.nom = 'Depp' AND a.prénom = 'Johnny';
+QUESTION 10 : SELECT DISTINCT film.titre
+FROM film, artiste AS realisateur, role, artiste AS acteur
+WHERE film.idRéalisateur = realisateur.idArtiste
+  AND film.idFilm = role.idFilm
+  AND role.idActeur = acteur.idArtiste
+  AND realisateur.nom = 'Burton'
+  AND realisateur.prénom = 'Tim'
+  AND acteur.nom = 'Depp'
+  AND acteur.prénom = 'Johnny';
+
 
 QUESTION 11 : Match point, Scoop, Manhattan, Annie Hall, Alice, Intérieurs, Maris et femmes, Minuit à Paris. Il a jouer comme role : Sid Waterman,Isaac Davis,Alvy Singer,Prof. Gabriel 'Gabe' Roth
 
